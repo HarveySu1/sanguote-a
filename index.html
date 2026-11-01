@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>三国人物性格测试</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== 首页 ===== -->
+<div id="view-home" class="view active">
+  <div class="hero">
+    <div class="hero-badge">轻量 · 即点即用</div>
+    <h1>测测你是<br>哪位三国人物</h1>
+    <p class="hero-sub">20 道场景题，第一反应作答<br>匹配你的性格底色，生成专属总结图</p>
+  </div>
+  <div class="entry-card">
+    <div class="entry-item" data-mode="work">
+      <div class="entry-icon">🏢</div>
+      <div class="entry-info">
+        <div class="entry-title">职场版</div>
+        <div class="entry-desc">工作、项目、团队场景</div>
+      </div>
+      <div class="entry-arrow">›</div>
+    </div>
+    <div class="entry-item" data-mode="student">
+      <div class="entry-icon">🎒</div>
+      <div class="entry-info">
+        <div class="entry-title">学生版</div>
+        <div class="entry-desc">学习、校园、宿舍场景</div>
+      </div>
+      <div class="entry-arrow">›</div>
+    </div>
+  </div>
+  <p class="tip">共 30 位三国人物画像 · 结果可保存分享</p>
+</div>
+
+<!-- ===== 答题页 ===== -->
+<div id="view-quiz" class="view">
+  <div class="quiz-header">
+    <div class="quiz-progress-text" id="quizProgressText">1 / 20</div>
+    <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizProgressFill"></div></div>
+  </div>
+  <div class="quiz-card">
+    <div class="quiz-qnum" id="quizQnum">第 1 题</div>
+    <h2 class="quiz-question" id="quizQuestion"></h2>
+    <div class="quiz-options" id="quizOptions"></div>
+  </div>
+</div>
+
+<!-- ===== 结果页 ===== -->
+<div id="view-result" class="view">
+  <div class="result-loading" id="resultLoading">
+    <div class="spinner"></div>
+    <p>正在推算你的三国本命…</p>
+  </div>
+  <div class="result-body hidden" id="resultBody">
+    <div class="result-badge">测试结果</div>
+    <div class="result-score">
+      <span class="score-label">匹配度</span>
+      <span class="score-num" id="scoreNum">98</span>
+      <span class="score-percent">%</span>
+    </div>
+    <div class="result-name" id="resultName"></div>
+    <div class="result-tags" id="resultTags"></div>
+    <div class="result-portrait">
+      <img id="resultImg" alt="人物画像">
+    </div>
+    <div class="result-section">
+      <div class="section-title">六维性格雷达</div>
+      <div class="bars" id="resultBars"></div>
+    </div>
+    <div class="result-section">
+      <div class="section-title">匹配度解读</div>
+      <p class="section-text" id="resultInterp"></p>
+    </div>
+    <div class="result-section">
+      <div class="section-title">共同底色</div>
+      <p class="section-text" id="resultCommon"></p>
+    </div>
+    <div class="result-section">
+      <div class="section-title">现实行为映射</div>
+      <p class="section-text" id="resultBehavior"></p>
+    </div>
+    <div class="result-section">
+      <div class="section-title">风险提醒</div>
+      <p class="section-text" id="resultRisk"></p>
+    </div>
+    <div class="result-line" id="resultLine"></div>
+    <div class="result-actions">
+      <button class="btn btn-primary" id="btnSave">保存总结图</button>
+      <button class="btn btn-ghost" id="btnRetry">重新测试</button>
+    </div>
+    <canvas id="resultCanvas" class="hidden"></canvas>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
